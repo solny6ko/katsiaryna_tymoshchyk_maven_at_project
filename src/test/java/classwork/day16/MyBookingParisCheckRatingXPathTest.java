@@ -1,5 +1,8 @@
 package classwork.day16;
 
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -10,16 +13,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.Arrays;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class Day16DriverBooking {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
+public class MyBookingParisCheckRatingXPathTest {
+    private WebDriver driver;
+
+    @Before
+    public void before() {
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+    }
+
+    @Test
+    public void myBookingParisCheckRatingXPath() {
         driver.get("https://booking.com");
         try {
             driver.findElement(By.xpath("//button[@aria-label='Dismiss sign-in info.']")).click();
@@ -60,7 +69,7 @@ public class Day16DriverBooking {
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3[text()='Your Budget (per night)']"))
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3[text()='Your budget (per night)']"))
         );
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.findElement(By.xpath("//div[@data-filters-item='review_score:review_score=60']//span[2]")).click();
@@ -86,8 +95,9 @@ public class Day16DriverBooking {
         System.out.println(onlyScoreValue);
 
         assertEquals("Score of the first sorted hotel is wrong", "6", onlyScoreValue);
+    }
+    @After
+    public void cLoseBrowser() {
         driver.close();
-
-
     }
 }

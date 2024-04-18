@@ -11,7 +11,7 @@ import java.time.format.TextStyle;
 import java.util.Locale;
 
 public class GoogleWeather {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://google.com");
@@ -19,7 +19,7 @@ public class GoogleWeather {
         Thread.sleep(2000);
         driver.findElement(By.xpath("//span[tesxt()='погода']/b[text()=]' минск']")).click();
         driver.findElement(By.xpath("//div[@id='wop_dp']/div[2]")).click();
-        Thread.sleep(2000)
+        Thread.sleep(2000);
 
         String tomorrow = LocalDate.now(ZoneId.systemDefault()).plusDays(1)
                 .getDayOfWeek().getDisplayName(TextStyle.FULL, new Locale("be"));
