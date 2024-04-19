@@ -1,0 +1,14 @@
+name: YAML Test Suite
+parallel: classes
+threadCount: 2
+tests:
+  - name: Booking Test
+    classes:
+      - tests.TestNGTests.MyBookingHoverCheckNGTest
+      - tests.TestNGTests.MyBookingLondonScreenshotsNGTest
+      - tests.TestNGTests.MyBookingMaxRatingCssNGTest
+      - tests.TestNGTests.MyBookingMaxRatingXPathNGTest
+      - tests.TestNGTests.MyBookingParisCheckRatingCssNGTest
+      - tests.TestNGTests.MyBookingParisCheckRatingXPathNGTest
+      - tests.TestNGTests.MyDemoQATasksNGTest
+      - tests.TestNGTests.MyW3schoolsAndGoogleSearchNGTest
