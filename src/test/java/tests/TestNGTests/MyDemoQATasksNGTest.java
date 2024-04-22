@@ -4,9 +4,10 @@ package tests.TestNGTests;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.demoqa.SelectPageDemoQA;
+import tests.BaseStepsTestNG;
 
-public class MyDemoQATasksNGTest {
-    private SelectPageDemoQA demoQASelectPage;
+public class MyDemoQATasksNGTest extends BaseStepsTestNG {
+    private SelectPageDemoQA demoQASelectPage = new SelectPageDemoQA();
 
     @Test
     public void demoQATasksSelectValue() {

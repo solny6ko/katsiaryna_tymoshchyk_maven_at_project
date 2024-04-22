@@ -5,20 +5,20 @@ import org.testng.annotations.*;
 import pages.booking.HomePageBookingXPath;
 import pages.booking.HotelPageBookingXPath;
 import pages.booking.SearchResultsPageBookingXPath;
-import tests.BaseTest;
+import tests.BaseStepsJUnit;
+import tests.BaseStepsTestNG;
 import utils.WindowsHandleUtility;
 
 
-public class MyBookingMaxRatingXPathNGTest extends BaseTest {
-    private HomePageBookingXPath bookingHomePage;
-    private SearchResultsPageBookingXPath bookingSearchResultPage;
-    private HotelPageBookingXPath bookingHotelPage;
+public class MyBookingMaxRatingXPathNGTest extends BaseStepsTestNG {
+    private HomePageBookingXPath bookingHomePage = new HomePageBookingXPath();
+    private SearchResultsPageBookingXPath bookingSearchResultPage = new SearchResultsPageBookingXPath();
+    private HotelPageBookingXPath bookingHotelPage = new HotelPageBookingXPath();
 
     @Test
     public void checkBookingMaxRatingXPath() {
 
         bookingHomePage.navigateToBookingPage();
-        String originalWindow = driver.getWindowHandle();
         bookingHomePage.dismissSignIn();
         bookingHomePage.acceptCookies();
         bookingHomePage.typeCity("Prague");
@@ -29,7 +29,7 @@ public class MyBookingMaxRatingXPathNGTest extends BaseTest {
         bookingSearchResultPage.choose5StarsRating();
         bookingSearchResultPage.waitForHeaderOfImplementedFilter5Xpath();
         bookingSearchResultPage.clickOnRating();
-        WindowsHandleUtility.switchToNewOpenedWindow(driver, originalWindow);
+        WindowsHandleUtility.switchToNewOpenedWindow();
         bookingHotelPage.waitForPropertyRatingStarsXpath();
         Assert.assertEquals(bookingHotelPage.calculateRatingStars(), "5",
                 "Rating is wrong");

@@ -26,7 +26,7 @@ public class SelectPageDemoQA {
         return driver.findElement(By.xpath("//div[text()='Group 1, option 2']")).isDisplayed();
     }
 
-    public void selectOptionInSelectOne(){
+    public void selectOptionInSelectValue(){
         driver.findElement(By.xpath("//div[text()='Group 1, option 2']")).click();
     }
 

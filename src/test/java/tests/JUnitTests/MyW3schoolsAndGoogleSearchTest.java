@@ -5,11 +5,12 @@ import org.junit.Test;
 import pages.google.SearchResultPageGoogle;
 import pages.google.StartPageGoogle;
 import pages.w3cschool.JavaTutorialPageW3CSchool;
+import tests.BaseStepsJUnit;
 
-public class MyW3schoolsAndGoogleSearchTest {
-    private JavaTutorialPageW3CSchool javaTutorialW3CSchoolPage;
-    private StartPageGoogle googleStartPage;
-    private SearchResultPageGoogle googleSearchResultsPage;
+public class MyW3schoolsAndGoogleSearchTest extends BaseStepsJUnit {
+    private JavaTutorialPageW3CSchool javaTutorialW3CSchoolPage = new JavaTutorialPageW3CSchool();
+    private StartPageGoogle googleStartPage = new StartPageGoogle();
+    private SearchResultPageGoogle googleSearchResultsPage = new SearchResultPageGoogle();
 
     @Test
     public void myW3schoolsAndGoogleSearch() {

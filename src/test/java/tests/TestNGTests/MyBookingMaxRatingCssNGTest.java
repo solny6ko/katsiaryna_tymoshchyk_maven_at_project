@@ -5,20 +5,20 @@ import org.testng.annotations.*;
 import pages.booking.HomePageBookingCss;
 import pages.booking.HotelPageBookingCss;
 import pages.booking.SearchResultsPageBookingCss;
-import tests.BaseTest;
+import tests.BaseStepsJUnit;
+import tests.BaseStepsTestNG;
 import utils.WindowsHandleUtility;
 
 
-public class MyBookingMaxRatingCssNGTest extends BaseTest {
-    private HomePageBookingCss bookingHomePageCss;
-    private SearchResultsPageBookingCss bookingSearchResultPageCss;
-    private HotelPageBookingCss bookingHotelPageCss;
+public class MyBookingMaxRatingCssNGTest extends BaseStepsTestNG {
+    private HomePageBookingCss bookingHomePageCss = new HomePageBookingCss();
+    private SearchResultsPageBookingCss bookingSearchResultPageCss = new SearchResultsPageBookingCss();
+    private HotelPageBookingCss bookingHotelPageCss = new HotelPageBookingCss();
 
     @Test
     public void checkBookingMaxRatingCss() {
 
         bookingHomePageCss.navigateToBookingPage();
-        String originalWindow = driver.getWindowHandle();
         bookingHomePageCss.dismissSignIn();
         bookingHomePageCss.acceptCookies();
         bookingHomePageCss.typeCity("Prague");
@@ -29,7 +29,7 @@ public class MyBookingMaxRatingCssNGTest extends BaseTest {
         bookingSearchResultPageCss.choose5StarsRating();
         bookingSearchResultPageCss.waitForHeaderOfImplementedFilter5Xpath();
         bookingSearchResultPageCss.clickOnRating();
-        WindowsHandleUtility.switchToNewOpenedWindow(driver, originalWindow);
+        WindowsHandleUtility.switchToNewOpenedWindow();
         bookingHotelPageCss.waitForPropertyRatingStarsXpath();
         Assert.assertEquals(bookingHotelPageCss.calculateRatingStars(),
                 "5",

@@ -4,12 +4,13 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.booking.HomePageBookingXPath;
 import pages.booking.SearchResultsPageBookingXPath;
-import tests.BaseTest;
+import tests.BaseStepsJUnit;
+import tests.BaseStepsTestNG;
 
-public class MyBookingHoverCheckNGTest extends BaseTest {
+public class MyBookingHoverCheckNGTest extends BaseStepsTestNG {
 
-    private HomePageBookingXPath bookingHomePage;
-    private SearchResultsPageBookingXPath bookingSearchResultPage;
+    private HomePageBookingXPath bookingHomePage = new HomePageBookingXPath();
+    private SearchResultsPageBookingXPath bookingSearchResultPage = new SearchResultsPageBookingXPath();
 
     @Test
     public void checkCheckAltTextCurrency() {

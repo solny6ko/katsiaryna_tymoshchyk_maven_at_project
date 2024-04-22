@@ -2,17 +2,15 @@ package tests.JUnitTests;
 
 import org.junit.Test;
 import pages.booking.HomePageBookingCss;
-import pages.booking.HomePageBookingXPath;
 import pages.booking.SearchResultsPageBookingCss;
-import pages.booking.SearchResultsPageBookingXPath;
-import tests.BaseTest;
+import tests.BaseStepsJUnit;
 
 import static org.testng.AssertJUnit.assertEquals;
 
 
-public class MyBookingParisCheckRatingCssTest extends BaseTest {
-    private HomePageBookingCss bookingHomePageCss;
-    private SearchResultsPageBookingCss bookingSearchResultPageCss;
+public class MyBookingParisCheckRatingCssTest extends BaseStepsJUnit {
+    private HomePageBookingCss bookingHomePageCss = new HomePageBookingCss();
+    private SearchResultsPageBookingCss bookingSearchResultPageCss = new SearchResultsPageBookingCss();
 
     @Test
     public void myBookingParisCheckRatingCss() {

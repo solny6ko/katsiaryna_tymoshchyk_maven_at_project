@@ -3,14 +3,14 @@ package tests.JUnitTests;
 import org.junit.Test;
 import pages.booking.HomePageBookingXPath;
 import pages.booking.SearchResultsPageBookingXPath;
-import tests.BaseTest;
+import tests.BaseStepsJUnit;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class MyBookingHoverCheckTest extends BaseTest {
+public class MyBookingHoverCheckTest extends BaseStepsJUnit {
 
-    private HomePageBookingXPath bookingHomePage;
-    private SearchResultsPageBookingXPath bookingSearchResultPage;
+    private HomePageBookingXPath bookingHomePage = new HomePageBookingXPath();
+    private SearchResultsPageBookingXPath bookingSearchResultPage = new SearchResultsPageBookingXPath();
 
     @Test
     public void checkCheckAltTextCurrency() {
@@ -25,7 +25,7 @@ public class MyBookingHoverCheckTest extends BaseTest {
     public void checkCheckAltTextLanguage() {
         bookingHomePage.navigateToBookingPage();
         bookingHomePage.dismissSignIn();
-        bookingHomePage.acceptCookies();
+//        bookingHomePage.acceptCookies();
         assertEquals("Alt text on Select your language button is wrong, ",
                 "Select your language", bookingHomePage.checkLanguagePicker());
     }

@@ -3,14 +3,14 @@ package tests.JUnitTests;
 import org.junit.Test;
 import pages.booking.HomePageBookingXPath;
 import pages.booking.SearchResultsPageBookingXPath;
-import tests.BaseTest;
+import tests.BaseStepsJUnit;
 
 import static org.testng.AssertJUnit.assertEquals;
 
 
-public class MyBookingParisCheckRatingXPathTest extends BaseTest {
-    private HomePageBookingXPath bookingHomePage;
-    private SearchResultsPageBookingXPath bookingSearchResultPage;
+public class MyBookingParisCheckRatingXPathTest extends BaseStepsJUnit {
+    private HomePageBookingXPath bookingHomePage = new HomePageBookingXPath();
+    private SearchResultsPageBookingXPath bookingSearchResultPage = new SearchResultsPageBookingXPath();
 
     @Test
     public void myBookingParisCheckRatingXPath() {

@@ -4,16 +4,17 @@ package tests.JUnitTests;
 import org.junit.Assert;
 import org.junit.Test;
 import pages.demoqa.SelectPageDemoQA;
+import tests.BaseStepsJUnit;
 
-public class MyDemoQATasksTest {
-    private SelectPageDemoQA demoQASelectPage;
+public class MyDemoQATasksTest extends BaseStepsJUnit {
+    private SelectPageDemoQA demoQASelectPage = new SelectPageDemoQA();
 
     @Test
     public void demoQATasksSelectValue() {
         demoQASelectPage.navigateToDemoQAPage();
         demoQASelectPage.selectSelectValue();
         demoQASelectPage.waitForSelectValue();
-        demoQASelectPage.selectSelectValue();
+        demoQASelectPage.selectOptionInSelectValue();
         Assert.assertTrue("'Group 1, option 2' value is not selected",
                 demoQASelectPage.checkSelectedValueForSelectValue());
     }
