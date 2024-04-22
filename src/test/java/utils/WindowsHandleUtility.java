@@ -4,26 +4,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.Set;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.numberOfWindowsToBe;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.ArrayList;
+import driver.DriverInit;
 
 public class WindowsHandleUtility {
-
-    public static void switchToNewOpenedWindow(WebDriver driver, String originalWindow) {
-        Set<String> openedWindows = driver.getWindowHandles();
+    static WebDriver driver = DriverInit.getWebDriver();
+    public static void switchToNewOpenedWindow() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-        new WebDriverWait(driver, Duration.ofSeconds(20)).until(
-                numberOfWindowsToBe(2)
-        );
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        new WebDriverWait(driver, Duration.ofSeconds(30))
+                .until(ExpectedConditions.numberOfWindowsToBe(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
-        for (String windowHandle : openedWindows) {
-            if (!windowHandle.contentEquals(originalWindow)) {
-                driver.switchTo().window(windowHandle);
-                break;
-            }
-        }
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(tabs.size() - 1));
     }
 }
 

@@ -4,11 +4,12 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.booking.HomePageBookingXPath;
 import pages.booking.SearchResultsPageBookingXPath;
-import tests.BaseTest;
+import tests.BaseStepsJUnit;
+import tests.BaseStepsTestNG;
 
-public class MyBookingLondonScreenshotsNGTest extends BaseTest {
-    private HomePageBookingXPath bookingHomePage;
-    private SearchResultsPageBookingXPath bookingSearchResultPage;
+public class MyBookingLondonScreenshotsNGTest extends BaseStepsTestNG {
+    private HomePageBookingXPath bookingHomePage = new HomePageBookingXPath();
+    private SearchResultsPageBookingXPath bookingSearchResultPage = new SearchResultsPageBookingXPath();
 
     @Test
     public void checkMyBookingLondonScreenshots() {

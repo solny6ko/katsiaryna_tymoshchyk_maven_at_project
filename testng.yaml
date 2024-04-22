@@ -2,7 +2,7 @@ name: YAML Test Suite
 parallel: classes
 threadCount: 2
 tests:
-  - name: Booking Test
+  - name: All Test
     classes:
       - tests.TestNGTests.MyBookingHoverCheckNGTest
       - tests.TestNGTests.MyBookingLondonScreenshotsNGTest
