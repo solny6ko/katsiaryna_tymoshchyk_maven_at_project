@@ -1,12 +1,8 @@
 package pages.booking;
 
-import driver.DriverInit;
+import driver.Driver;
 import org.openqa.selenium.*;
 import utils.ExplicitElementWait;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class SearchResultsPageBookingCss {
 
@@ -17,7 +13,7 @@ public class SearchResultsPageBookingCss {
     public static final String PROPERTY_REVIEW_SCORE_6PLUS_BUTTON_CSS = "div[ data-testid='title']:first-of-type";
     public static final String YOUR_BUDGET_HEADER_CSS = "#filter_group_price_\\:rg\\: > div:first-of-type > h3";
 
-    WebDriver driver = DriverInit.getWebDriver();
+    WebDriver driver = Driver.getWebDriver();
 
     public void choose5StarsRating() {
         driver.findElement(By.cssSelector(PROPERTY_RATING_CLASS_5_CSS)).click();

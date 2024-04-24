@@ -1,7 +1,7 @@
 package pages.booking;
 
+import driver.Driver;
 import org.openqa.selenium.*;
-import driver.DriverInit;
 import org.openqa.selenium.interactions.Actions;
 import utils.ExplicitElementWait;
 
@@ -16,7 +16,7 @@ public class HomePageBookingXPath {
     public static final String AUTOCOMPLETE_CITY_PARIS_XPATH = "//div[text()='Ile de France, France']";
     public static final String SUBMIT_SEARCH_REQUEST_XPATH = "//button[@type='submit']";
 
-    WebDriver driver = DriverInit.getWebDriver();
+    WebDriver driver = Driver.getWebDriver();
 
     public void navigateToBookingPage() {
         driver.get("https://booking.com");

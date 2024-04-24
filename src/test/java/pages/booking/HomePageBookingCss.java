@@ -1,11 +1,10 @@
 package pages.booking;
 
-import driver.DriverInit;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import utils.ExplicitElementWait;
 
 import java.time.LocalDate;
@@ -22,7 +21,7 @@ public class HomePageBookingCss {
     public static final String SUBMIT_SEARCH_REQUEST_CSS = "button[aria-label='Dismiss sign-in info.'] > span > span";
 
 
-    WebDriver driver = DriverInit.getWebDriver();
+    WebDriver driver = Driver.getWebDriver();
 
     public void navigateToBookingPage() {
         driver.get("https://booking.com");

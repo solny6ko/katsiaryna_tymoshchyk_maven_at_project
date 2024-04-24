@@ -1,6 +1,6 @@
 package pages.booking;
 
-import driver.DriverInit;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.ExplicitElementWait;
@@ -9,7 +9,7 @@ import utils.ExplicitElementWait;
 public class HotelPageBookingCss {
     public static final String PROPERTY_RATING_STARS_XPATH = "span[data-testid='rating-stars'] > span";
 
-    WebDriver driver = DriverInit.getWebDriver();
+    WebDriver driver = Driver.getWebDriver();
 
     public String calculateRatingStars() {
         int starsCount = 0;

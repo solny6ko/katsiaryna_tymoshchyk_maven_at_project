@@ -1,6 +1,6 @@
 package pages.booking;
 
-import driver.DriverInit;
+import driver.Driver;
 import org.openqa.selenium.*;
 import utils.ExplicitElementWait;
 
@@ -18,7 +18,7 @@ public class SearchResultsPageBookingXPath {
     public static final String PROPERTY_REVIEW_SCORE_6PLUS_BUTTON_XPATH = "//span[text()='Pleasant: 6+']";
     public static final String YOUR_BUDGET_HEADER_XPATH = "//h3[text()='Your budget (per night)']";
 
-    WebDriver driver = DriverInit.getWebDriver();
+    WebDriver driver = Driver.getWebDriver();
 
     public void choose5StarsRating() {
         driver.findElement(By.xpath(PROPERTY_RATING_CLASS_5_XPATH)).click();

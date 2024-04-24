@@ -1,6 +1,6 @@
 package pages.demoqa;
 
-import driver.DriverInit;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class SelectPageDemoQA {
-    WebDriver driver = DriverInit.getWebDriver();
+    WebDriver driver = Driver.getWebDriver();
 
     public void navigateToDemoQAPage() {
         driver.get("https://demoqa.com/select-menu");
