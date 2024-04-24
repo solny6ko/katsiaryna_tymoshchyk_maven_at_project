@@ -1,16 +1,16 @@
 package tests.JUnitTests;
 
 import org.junit.Test;
-import pages.booking.HomePageBookingXPath;
-import pages.booking.SearchResultsPageBookingXPath;
+import pages.booking.BookingHomePageXPath;
+import pages.booking.BookingSearchResultsPageXPath;
 import tests.BaseStepsJUnit;
 
 import static org.testng.AssertJUnit.assertEquals;
 
 public class MyBookingHoverCheckTest extends BaseStepsJUnit {
 
-    private HomePageBookingXPath bookingHomePage = new HomePageBookingXPath();
-    private SearchResultsPageBookingXPath bookingSearchResultPage = new SearchResultsPageBookingXPath();
+    private BookingHomePageXPath bookingHomePage = new BookingHomePageXPath();
+    private BookingSearchResultsPageXPath bookingSearchResultPage = new BookingSearchResultsPageXPath();
 
     @Test
     public void checkCheckAltTextCurrency() {

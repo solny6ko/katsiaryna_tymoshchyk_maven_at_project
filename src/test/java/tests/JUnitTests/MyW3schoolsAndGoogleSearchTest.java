@@ -2,15 +2,15 @@ package tests.JUnitTests;
 
 import org.junit.Assert;
 import org.junit.Test;
-import pages.google.SearchResultPageGoogle;
-import pages.google.StartPageGoogle;
-import pages.w3cschool.JavaTutorialPageW3CSchool;
+import pages.google.GoogleSearchResultPage;
+import pages.google.GoogleStartPage;
+import pages.w3cschool.W3CSchoolJavaTutorialPage;
 import tests.BaseStepsJUnit;
 
 public class MyW3schoolsAndGoogleSearchTest extends BaseStepsJUnit {
-    private JavaTutorialPageW3CSchool javaTutorialW3CSchoolPage = new JavaTutorialPageW3CSchool();
-    private StartPageGoogle googleStartPage = new StartPageGoogle();
-    private SearchResultPageGoogle googleSearchResultsPage = new SearchResultPageGoogle();
+    private W3CSchoolJavaTutorialPage javaTutorialW3CSchoolPage = new W3CSchoolJavaTutorialPage();
+    private GoogleStartPage googleStartPage = new GoogleStartPage();
+    private GoogleSearchResultPage googleSearchResultsPage = new GoogleSearchResultPage();
 
     @Test
     public void myW3schoolsAndGoogleSearch() {

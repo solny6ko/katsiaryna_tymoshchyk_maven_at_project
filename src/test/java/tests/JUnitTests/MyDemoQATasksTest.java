@@ -3,11 +3,11 @@ package tests.JUnitTests;
 
 import org.junit.Assert;
 import org.junit.Test;
-import pages.demoqa.SelectPageDemoQA;
+import pages.demoqa.DemoQASelectPage;
 import tests.BaseStepsJUnit;
 
 public class MyDemoQATasksTest extends BaseStepsJUnit {
-    private SelectPageDemoQA demoQASelectPage = new SelectPageDemoQA();
+    private DemoQASelectPage demoQASelectPage = new DemoQASelectPage();
 
     @Test
     public void demoQATasksSelectValue() {

@@ -20,7 +20,7 @@ public class ExplicitElementWait {
     public static void waitForElementXCss(WebDriver driver, String elementToWaitForCss) {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath(elementToWaitForCss))
+                ExpectedConditions.visibilityOfElementLocated(By.cssSelector(elementToWaitForCss))
         );
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }

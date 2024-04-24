@@ -1,16 +1,16 @@
 package tests.JUnitTests;
 
 import org.junit.Test;
-import pages.booking.HomePageBookingCss;
-import pages.booking.SearchResultsPageBookingCss;
+import pages.booking.BookingHomePageCss;
+import pages.booking.BookingSearchResultsPageCss;
 import tests.BaseStepsJUnit;
 
 import static org.testng.AssertJUnit.assertEquals;
 
 
 public class MyBookingParisCheckRatingCssTest extends BaseStepsJUnit {
-    private HomePageBookingCss bookingHomePageCss = new HomePageBookingCss();
-    private SearchResultsPageBookingCss bookingSearchResultPageCss = new SearchResultsPageBookingCss();
+    private BookingHomePageCss bookingHomePageCss = new BookingHomePageCss();
+    private BookingSearchResultsPageCss bookingSearchResultPageCss = new BookingSearchResultsPageCss();
 
     @Test
     public void myBookingParisCheckRatingCss() {
@@ -21,6 +21,7 @@ public class MyBookingParisCheckRatingCssTest extends BaseStepsJUnit {
         bookingHomePageCss.typeCity("Paris");
         bookingHomePageCss.chooseParisAutocomplete();
         bookingHomePageCss.fillInDaysForStay(3, 10);
+        bookingHomePageCss.openStayParameters();
         bookingHomePageCss.addAdult();
         bookingHomePageCss.addAdult();
         bookingHomePageCss.addRoom();

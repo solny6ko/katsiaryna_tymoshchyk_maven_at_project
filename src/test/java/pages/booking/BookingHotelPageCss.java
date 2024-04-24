@@ -1,15 +1,15 @@
 package pages.booking;
 
-import driver.DriverInit;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.ExplicitElementWait;
 
 
-public class HotelPageBookingXPath {
-    public static final String PROPERTY_RATING_STARS_XPATH = "//span[@data-testid='rating-stars']/span[1]";
+public class BookingHotelPageCss {
+    public static final String PROPERTY_RATING_STARS_XPATH = "span[data-testid='rating-stars'] > span";
 
-    WebDriver driver = DriverInit.getWebDriver();
+    WebDriver driver = Driver.getWebDriver();
 
     public String calculateRatingStars() {
         int starsCount = 0;
@@ -24,7 +24,7 @@ public class HotelPageBookingXPath {
 
     //WAITERS
     public void waitForPropertyRatingStarsXpath() {
-        ExplicitElementWait.waitForElementXPath(driver, PROPERTY_RATING_STARS_XPATH);
+        ExplicitElementWait.waitForElementXCss(driver, PROPERTY_RATING_STARS_XPATH);
     }
 
 }

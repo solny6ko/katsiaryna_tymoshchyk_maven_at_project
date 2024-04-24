@@ -1,18 +1,18 @@
 package tests.JUnitTests;
 
 import org.junit.Test;
-import pages.booking.HomePageBookingXPath;
-import pages.booking.HotelPageBookingXPath;
-import pages.booking.SearchResultsPageBookingXPath;
+import pages.booking.BookingHomePageXPath;
+import pages.booking.BookingHotelPageXPath;
+import pages.booking.BookingSearchResultsPageXPath;
 import tests.BaseStepsJUnit;
 import utils.WindowsHandleUtility;
 
 import static org.testng.AssertJUnit.assertEquals;
 
 public class MyBookingMaxRatingXPathTest extends BaseStepsJUnit {
-    private HomePageBookingXPath bookingHomePage = new HomePageBookingXPath();
-    private SearchResultsPageBookingXPath bookingSearchResultPage = new SearchResultsPageBookingXPath();
-    private HotelPageBookingXPath bookingHotelPage = new HotelPageBookingXPath();
+    private BookingHomePageXPath bookingHomePage = new BookingHomePageXPath();
+    private BookingSearchResultsPageXPath bookingSearchResultPage = new BookingSearchResultsPageXPath();
+    private BookingHotelPageXPath bookingHotelPage = new BookingHotelPageXPath();
 
     @Test
     public void checkBookingMaxRatingXPath() {

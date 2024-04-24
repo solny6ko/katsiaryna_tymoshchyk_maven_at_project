@@ -2,18 +2,17 @@ package tests.TestNGTests;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
-import pages.booking.HomePageBookingXPath;
-import pages.booking.HotelPageBookingXPath;
-import pages.booking.SearchResultsPageBookingXPath;
-import tests.BaseStepsJUnit;
+import pages.booking.BookingHomePageXPath;
+import pages.booking.BookingHotelPageXPath;
+import pages.booking.BookingSearchResultsPageXPath;
 import tests.BaseStepsTestNG;
 import utils.WindowsHandleUtility;
 
 
 public class MyBookingMaxRatingXPathNGTest extends BaseStepsTestNG {
-    private HomePageBookingXPath bookingHomePage = new HomePageBookingXPath();
-    private SearchResultsPageBookingXPath bookingSearchResultPage = new SearchResultsPageBookingXPath();
-    private HotelPageBookingXPath bookingHotelPage = new HotelPageBookingXPath();
+    private BookingHomePageXPath bookingHomePage = new BookingHomePageXPath();
+    private BookingSearchResultsPageXPath bookingSearchResultPage = new BookingSearchResultsPageXPath();
+    private BookingHotelPageXPath bookingHotelPage = new BookingHotelPageXPath();
 
     @Test
     public void checkBookingMaxRatingXPath() {

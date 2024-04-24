@@ -2,14 +2,13 @@ package tests.TestNGTests;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
-import pages.booking.HomePageBookingCss;
-import pages.booking.SearchResultsPageBookingCss;
-import tests.BaseStepsJUnit;
+import pages.booking.BookingHomePageCss;
+import pages.booking.BookingSearchResultsPageCss;
 import tests.BaseStepsTestNG;
 
 public class MyBookingParisCheckRatingCssNGTest extends BaseStepsTestNG {
-    private HomePageBookingCss bookingHomePageCss = new HomePageBookingCss();
-    private SearchResultsPageBookingCss bookingSearchResultPageCss = new SearchResultsPageBookingCss();
+    private BookingHomePageCss bookingHomePageCss = new BookingHomePageCss();
+    private BookingSearchResultsPageCss bookingSearchResultPageCss = new BookingSearchResultsPageCss();
 
     @Test
     public void myBookingParisCheckRatingCss() {

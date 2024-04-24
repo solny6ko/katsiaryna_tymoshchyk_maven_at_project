@@ -1,21 +1,21 @@
 package tests;
 
-import driver.DriverInit;
+import driver.Driver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class BaseStepsTestNG extends DriverInit{
+public class BaseStepsTestNG {
 
     static WebDriver driver;
 
     @BeforeClass
     public static void initDriver() {
-        driver = DriverInit.getWebDriver();
+        driver = Driver.getWebDriver();
     }
 
     @AfterClass
     public static void closeDriver() {
-       driver.quit();
+        Driver.destroy();
     }
 }

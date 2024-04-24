@@ -1,13 +1,13 @@
 package pages.google;
 
-import driver.DriverInit;
+import driver.Driver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.Arrays;
 
-public class StartPageGoogle {
-    WebDriver driver = DriverInit.getWebDriver();
+public class GoogleStartPage {
+    WebDriver driver = Driver.getWebDriver();
 
     public void navigateToGoogleHomePage() {
         driver.get("https://google.com");

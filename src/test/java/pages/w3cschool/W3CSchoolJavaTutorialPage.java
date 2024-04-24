@@ -1,13 +1,13 @@
 package pages.w3cschool;
 
-import driver.DriverInit;
+import driver.Driver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.Arrays;
 
-public class JavaTutorialPageW3CSchool {
-    WebDriver driver = DriverInit.getWebDriver();
+public class W3CSchoolJavaTutorialPage {
+    WebDriver driver = Driver.getWebDriver();
 
     public void navigateToJavaTutorialW3CSchoolPage() {
         driver.get("https://www.w3schools.com/java/");
