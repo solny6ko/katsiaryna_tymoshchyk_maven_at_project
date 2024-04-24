@@ -8,9 +8,9 @@ import utils.WindowsHandleUtility;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class MyBookingMaxRatingCssTest extends BaseStepsJUnit {
-    private HomePageBookingCss bookingHomePageCss = new HomePageBookingCss();
-    private SearchResultsPageBookingCss bookingSearchResultPageCss = new SearchResultsPageBookingCss();
-    private HotelPageBookingCss bookingHotelPageCss = new HotelPageBookingCss();
+    private BookingHomePageCss bookingHomePageCss = new BookingHomePageCss();
+    private BookingSearchResultsPageCss bookingSearchResultPageCss = new BookingSearchResultsPageCss();
+    private BookingHotelPageCss bookingHotelPageCss = new BookingHotelPageCss();
 
     @Test
     public void checkBookingMaxRatingCss() {

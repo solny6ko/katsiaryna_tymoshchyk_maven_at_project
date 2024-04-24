@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class BaseStepsTestNG extends Driver {
+public class BaseStepsTestNG {
 
     static WebDriver driver;
 

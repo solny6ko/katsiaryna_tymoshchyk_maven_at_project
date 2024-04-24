@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class SelectPageDemoQA {
+public class DemoQASelectPage {
     WebDriver driver = Driver.getWebDriver();
 
     public void navigateToDemoQAPage() {

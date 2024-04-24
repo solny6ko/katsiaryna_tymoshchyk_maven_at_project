@@ -1,16 +1,16 @@
 package tests.JUnitTests;
 
 import org.junit.Test;
-import pages.booking.HomePageBookingXPath;
-import pages.booking.SearchResultsPageBookingXPath;
+import pages.booking.BookingHomePageXPath;
+import pages.booking.BookingSearchResultsPageXPath;
 import tests.BaseStepsJUnit;
 
 import static org.testng.AssertJUnit.assertEquals;
 
 
 public class MyBookingParisCheckRatingXPathTest extends BaseStepsJUnit {
-    private HomePageBookingXPath bookingHomePage = new HomePageBookingXPath();
-    private SearchResultsPageBookingXPath bookingSearchResultPage = new SearchResultsPageBookingXPath();
+    private BookingHomePageXPath bookingHomePage = new BookingHomePageXPath();
+    private BookingSearchResultsPageXPath bookingSearchResultPage = new BookingSearchResultsPageXPath();
 
     @Test
     public void myBookingParisCheckRatingXPath() {
@@ -21,6 +21,7 @@ public class MyBookingParisCheckRatingXPathTest extends BaseStepsJUnit {
         bookingHomePage.typeCity("Paris");
         bookingHomePage.chooseParisAutocomplete();
         bookingHomePage.fillInDaysForStay(3, 10);
+        bookingHomePage.openStayParameters();
         bookingHomePage.addAdult();
         bookingHomePage.addAdult();
         bookingHomePage.addRoom();

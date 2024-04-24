@@ -5,7 +5,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 
-public class BaseStepsJUnit extends Driver {
+public class BaseStepsJUnit {
 
     static WebDriver driver;
 

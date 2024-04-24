@@ -7,7 +7,7 @@ import utils.ExplicitElementWait;
 
 import java.time.LocalDate;
 import java.util.Arrays;
-public class HomePageBookingXPath {
+public class BookingHomePageXPath {
 
     public static final String DISMISS_SIGN_IN_INFO_XPATH = "//button[@aria-label='Dismiss sign-in info.']";
     public static final String ACCEPT_COOKIES_BTN_XPATH = "//button[@id='onetrust-accept-btn-handler']";
@@ -55,9 +55,10 @@ public class HomePageBookingXPath {
         driver.findElement(By.xpath(String.format(pathToDay, checkInDay))).click();
         driver.findElement(By.xpath(String.format(pathToDay, checkOutDay))).click();
     }
-
-    public void addAdult(){
+    public void openStayParameters(){
         driver.findElement(By.xpath("//span[@data-testid='occupancy-config-icon']")).click();
+    }
+    public void addAdult(){
         WebElement adults = driver.findElement(By.xpath("//label[@for='group_adults']/../following-sibling::div/button[2]"));
         adults.click();
     }

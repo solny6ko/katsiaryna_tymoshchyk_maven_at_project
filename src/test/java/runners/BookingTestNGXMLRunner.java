@@ -15,5 +15,6 @@ public class BookingTestNGXMLRunner {
         final List<XmlSuite> suites = parser.parseToList();
         testNG.setXmlSuites(suites);
         testNG.run();
+        System.out.println(System.getProperty("CONFIG"));
     }
 }

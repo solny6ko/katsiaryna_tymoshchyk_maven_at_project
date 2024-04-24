@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.Arrays;
 
-public class StartPageGoogle {
+public class GoogleStartPage {
     WebDriver driver = Driver.getWebDriver();
 
     public void navigateToGoogleHomePage() {

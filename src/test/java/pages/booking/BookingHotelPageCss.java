@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import utils.ExplicitElementWait;
 
 
-public class HotelPageBookingCss {
+public class BookingHotelPageCss {
     public static final String PROPERTY_RATING_STARS_XPATH = "span[data-testid='rating-stars'] > span";
 
     WebDriver driver = Driver.getWebDriver();

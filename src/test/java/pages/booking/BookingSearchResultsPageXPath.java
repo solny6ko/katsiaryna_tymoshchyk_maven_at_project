@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class SearchResultsPageBookingXPath {
+public class BookingSearchResultsPageXPath {
     public static final String PROPERTY_RATING_HEADER_XPATH = "//h3[text()='Property rating']";
     public static final String PROPERTY_RATING_CLASS_5_XPATH = "//div[@data-filters-item='class:class=5']//label//span[2]";
     public static final String HEADER_OF_IMPLEMENTED_FILTER_5_XPATH = "//span[text()='5 stars']";

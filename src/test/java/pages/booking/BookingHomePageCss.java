@@ -10,7 +10,7 @@ import utils.ExplicitElementWait;
 import java.time.LocalDate;
 import java.util.Arrays;
 
-public class HomePageBookingCss {
+public class BookingHomePageCss {
 
 
     public static final String DISMISS_SIGN_IN_INFO_CSS = "button[aria-label='Dismiss sign-in info.'] > span > span";
@@ -18,7 +18,7 @@ public class HomePageBookingCss {
     public static final String CITY_INPUT_FIELD_CSS = "input[name='ss']";
     public static final String AUTOCOMPLETE_CITY_PRAGUE_CSS = "#autocomplete-result-0 > div > div > div > :first-of-type";
     public static final String AUTOCOMPLETE_CITY_PARIS_CSS = "#autocomplete-result-0 > div > div > div > :first-of-type";
-    public static final String SUBMIT_SEARCH_REQUEST_CSS = "button[aria-label='Dismiss sign-in info.'] > span > span";
+    public static final String SUBMIT_SEARCH_REQUEST_CSS = "button[type='submit']";
 
 
     WebDriver driver = Driver.getWebDriver();
@@ -28,7 +28,7 @@ public class HomePageBookingCss {
     }
 
     public void acceptCookies() {
-        ExplicitElementWait.waitForElementXPath(driver, ACCEPT_COOKIES_BTN_CSS);
+        ExplicitElementWait.waitForElementXCss(driver, ACCEPT_COOKIES_BTN_CSS);
         driver.findElement(By.cssSelector(ACCEPT_COOKIES_BTN_CSS)).click();
     }
 
@@ -50,7 +50,7 @@ public class HomePageBookingCss {
     }
 
     public void chooseParisAutocomplete() {
-        driver.findElement(By.xpath(AUTOCOMPLETE_CITY_PARIS_CSS)).click();
+        driver.findElement(By.cssSelector(AUTOCOMPLETE_CITY_PARIS_CSS)).click();
     }
 
     public void fillInDaysForStay(int daysToAddToCHeckIn, int daysToAddToCHeckOut) {
@@ -61,8 +61,11 @@ public class HomePageBookingCss {
         driver.findElement(By.xpath(String.format(pathToDay, checkOutDay))).click();
     }
 
-    public void addAdult() {
+
+    public void openStayParameters() {
         driver.findElement(By.cssSelector("button[data-testid='occupancy-config']")).click();
+    }
+    public void addAdult() {
         WebElement adults = driver.findElement(By.cssSelector("div[data-testid='occupancy-popup'] > div > div:first-child > div > button~button > span"));
         adults.click();
     }

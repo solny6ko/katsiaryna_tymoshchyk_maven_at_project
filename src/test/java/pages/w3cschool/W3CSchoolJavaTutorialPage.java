@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.Arrays;
 
-public class JavaTutorialPageW3CSchool {
+public class W3CSchoolJavaTutorialPage {
     WebDriver driver = Driver.getWebDriver();
 
     public void navigateToJavaTutorialW3CSchoolPage() {

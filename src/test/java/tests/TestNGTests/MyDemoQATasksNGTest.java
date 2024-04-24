@@ -3,11 +3,11 @@ package tests.TestNGTests;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
-import pages.demoqa.SelectPageDemoQA;
+import pages.demoqa.DemoQASelectPage;
 import tests.BaseStepsTestNG;
 
 public class MyDemoQATasksNGTest extends BaseStepsTestNG {
-    private SelectPageDemoQA demoQASelectPage = new SelectPageDemoQA();
+    private DemoQASelectPage demoQASelectPage = new DemoQASelectPage();
 
     @Test
     public void demoQATasksSelectValue() {

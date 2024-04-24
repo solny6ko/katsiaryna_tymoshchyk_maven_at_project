@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class SearchResultPageGoogle {
+public class GoogleSearchResultPage {
 
     WebDriver driver = Driver.getWebDriver();
 

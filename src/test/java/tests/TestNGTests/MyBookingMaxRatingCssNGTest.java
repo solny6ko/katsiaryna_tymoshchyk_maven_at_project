@@ -2,18 +2,16 @@ package tests.TestNGTests;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
-import pages.booking.HomePageBookingCss;
-import pages.booking.HotelPageBookingCss;
-import pages.booking.SearchResultsPageBookingCss;
-import tests.BaseStepsJUnit;
+import pages.booking.BookingHomePageCss;
+import pages.booking.BookingHotelPageCss;
+import pages.booking.BookingSearchResultsPageCss;
 import tests.BaseStepsTestNG;
 import utils.WindowsHandleUtility;
 
-
 public class MyBookingMaxRatingCssNGTest extends BaseStepsTestNG {
-    private HomePageBookingCss bookingHomePageCss = new HomePageBookingCss();
-    private SearchResultsPageBookingCss bookingSearchResultPageCss = new SearchResultsPageBookingCss();
-    private HotelPageBookingCss bookingHotelPageCss = new HotelPageBookingCss();
+    private BookingHomePageCss bookingHomePageCss = new BookingHomePageCss();
+    private BookingSearchResultsPageCss bookingSearchResultPageCss = new BookingSearchResultsPageCss();
+    private BookingHotelPageCss bookingHotelPageCss = new BookingHotelPageCss();
 
     @Test
     public void checkBookingMaxRatingCss() {

@@ -4,7 +4,7 @@ import driver.Driver;
 import org.openqa.selenium.*;
 import utils.ExplicitElementWait;
 
-public class SearchResultsPageBookingCss {
+public class BookingSearchResultsPageCss {
 
     public static final String PROPERTY_RATING_CLASS_5_CSS = "div[ data-filters-item='class:class=5'] > label";
     public static final String HEADER_OF_IMPLEMENTED_FILTER_5_CSS = "div[ data-testid='title']:first-of-type";
