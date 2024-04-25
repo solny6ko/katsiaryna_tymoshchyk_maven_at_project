@@ -19,9 +19,8 @@ public class MyBookingParisCheckRatingCssNGTest extends BaseStepsTestNG {
         bookingHomePageCss.typeCity("Paris");
         bookingHomePageCss.chooseParisAutocomplete();
         bookingHomePageCss.fillInDaysForStay(3, 10);
-        bookingHomePageCss.addAdult();
-        bookingHomePageCss.addAdult();
-        bookingHomePageCss.addRoom();
+        bookingHomePageCss.addAdult(4);
+        bookingHomePageCss.addRoom(2);
         bookingHomePageCss.dismissSignIn();
         bookingHomePageCss.submitSearchQuery();
         bookingHomePageCss.dismissSignIn();

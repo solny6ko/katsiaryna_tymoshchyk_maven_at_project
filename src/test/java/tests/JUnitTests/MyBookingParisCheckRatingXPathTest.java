@@ -19,12 +19,11 @@ public class MyBookingParisCheckRatingXPathTest extends BaseStepsJUnit {
         bookingHomePage.dismissSignIn();
         bookingHomePage.acceptCookies();
         bookingHomePage.typeCity("Paris");
-        bookingHomePage.chooseParisAutocomplete();
-        bookingHomePage.fillInDaysForStay(3, 10);
+        bookingHomePage.chooseAutocompleteCity();
+        bookingHomePage.fillInDaysForStay(3, 5);
         bookingHomePage.openStayParameters();
-        bookingHomePage.addAdult();
-        bookingHomePage.addAdult();
-        bookingHomePage.addRoom();
+        bookingHomePage.addAdult(4);
+        bookingHomePage.addRoom(2);
         bookingHomePage.dismissSignIn();
         bookingHomePage.submitSearchQuery();
         bookingHomePage.dismissSignIn();

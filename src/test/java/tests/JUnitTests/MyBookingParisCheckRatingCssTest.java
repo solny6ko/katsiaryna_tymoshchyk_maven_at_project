@@ -22,9 +22,8 @@ public class MyBookingParisCheckRatingCssTest extends BaseStepsJUnit {
         bookingHomePageCss.chooseParisAutocomplete();
         bookingHomePageCss.fillInDaysForStay(3, 10);
         bookingHomePageCss.openStayParameters();
-        bookingHomePageCss.addAdult();
-        bookingHomePageCss.addAdult();
-        bookingHomePageCss.addRoom();
+        bookingHomePageCss.addAdult(4);
+        bookingHomePageCss.addRoom(2);
         bookingHomePageCss.dismissSignIn();
         bookingHomePageCss.submitSearchQuery();
         bookingHomePageCss.dismissSignIn();

@@ -65,14 +65,23 @@ public class BookingHomePageCss {
     public void openStayParameters() {
         driver.findElement(By.cssSelector("button[data-testid='occupancy-config']")).click();
     }
-    public void addAdult() {
-        WebElement adults = driver.findElement(By.cssSelector("div[data-testid='occupancy-popup'] > div > div:first-child > div > button~button > span"));
-        adults.click();
+    public void addAdult(int adultsQuantity) {
+        if (adultsQuantity == 1){
+            WebElement adultsMinus = driver.findElement(By.cssSelector("div[data-testid='occupancy-popup'] > div > div > div > button > span"));
+            adultsMinus.click();;
+        } else {
+            WebElement adultsPlus = driver.findElement(By.cssSelector("div[data-testid='occupancy-popup'] > div > div:first-child > div > button~button > span"));
+            for (int i=1; i<=(adultsQuantity-2); i++){
+                adultsPlus.click();
+            }
+        }
     }
-
-    public void addRoom() {
+    public void addRoom(int roomsQuantity){
         WebElement rooms = driver.findElement(By.cssSelector("div[data-testid='occupancy-popup'] > div > div:nth-of-type(3) > div > button~button > span"));
-        rooms.click();
+        for (int i=1; i<=(roomsQuantity-1); i++){
+            rooms.click();
+            i++;
+        }
     }
 
     public void submitSearchQuery() {
