@@ -21,7 +21,7 @@ public class MyBookingMaxRatingXPathTest extends BaseStepsJUnit {
         bookingHomePage.dismissSignIn();
         bookingHomePage.acceptCookies();
         bookingHomePage.typeCity("Prague");
-        bookingHomePage.choosePragueAutocomplete();
+        bookingHomePage.chooseAutocompleteCity();
         bookingHomePage.submitSearchQuery();
         bookingHomePage.dismissSignIn();
         bookingSearchResultPage.waitForPropertyRatingHeaderXpath();
