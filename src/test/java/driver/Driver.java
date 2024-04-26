@@ -4,8 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Optional;
 
@@ -50,5 +53,14 @@ public class Driver {
     public static void destroy() {
         driver.quit();
         driver = null;
+    }
+    public static void switchToNewOpenedWindow() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+        new WebDriverWait(driver, Duration.ofSeconds(30))
+                .until(ExpectedConditions.numberOfWindowsToBe(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(tabs.size() - 1));
     }
 }

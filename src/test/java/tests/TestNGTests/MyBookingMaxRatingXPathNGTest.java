@@ -1,12 +1,12 @@
 package tests.TestNGTests;
 
+import driver.Driver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.booking.BookingHomePageXPath;
 import pages.booking.BookingHotelPageXPath;
 import pages.booking.BookingSearchResultsPageXPath;
 import tests.BaseStepsTestNG;
-import utils.WindowsHandleUtility;
 
 
 public class MyBookingMaxRatingXPathNGTest extends BaseStepsTestNG {
@@ -28,7 +28,7 @@ public class MyBookingMaxRatingXPathNGTest extends BaseStepsTestNG {
         bookingSearchResultPage.choose5StarsRating();
         bookingSearchResultPage.waitForHeaderOfImplementedFilter5Xpath();
         bookingSearchResultPage.clickOnRating();
-        WindowsHandleUtility.switchToNewOpenedWindow();
+        Driver.switchToNewOpenedWindow();
         bookingHotelPage.waitForPropertyRatingStarsXpath();
         Assert.assertEquals(bookingHotelPage.calculateRatingStars(), "5",
                 "Rating is wrong");

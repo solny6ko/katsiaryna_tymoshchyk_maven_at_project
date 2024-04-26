@@ -1,11 +1,11 @@
 package tests.JUnitTests;
 
+import driver.Driver;
 import org.junit.Test;
 import pages.booking.BookingHomePageXPath;
 import pages.booking.BookingHotelPageXPath;
 import pages.booking.BookingSearchResultsPageXPath;
 import tests.BaseStepsJUnit;
-import utils.WindowsHandleUtility;
 
 import static org.testng.AssertJUnit.assertEquals;
 
@@ -28,7 +28,7 @@ public class MyBookingMaxRatingXPathTest extends BaseStepsJUnit {
         bookingSearchResultPage.choose5StarsRating();
         bookingSearchResultPage.waitForHeaderOfImplementedFilter5Xpath();
         bookingSearchResultPage.clickOnRating();
-        WindowsHandleUtility.switchToNewOpenedWindow();
+        Driver.switchToNewOpenedWindow();
         bookingHotelPage.waitForPropertyRatingStarsXpath();
         assertEquals("Rating is wrong, ",
                 "5",
