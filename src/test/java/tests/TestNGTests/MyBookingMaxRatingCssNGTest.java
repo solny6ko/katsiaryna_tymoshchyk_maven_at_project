@@ -1,12 +1,12 @@
 package tests.TestNGTests;
 
+import driver.Driver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.booking.BookingHomePageCss;
 import pages.booking.BookingHotelPageCss;
 import pages.booking.BookingSearchResultsPageCss;
 import tests.BaseStepsTestNG;
-import utils.WindowsHandleUtility;
 
 public class MyBookingMaxRatingCssNGTest extends BaseStepsTestNG {
     private BookingHomePageCss bookingHomePageCss = new BookingHomePageCss();
@@ -27,7 +27,7 @@ public class MyBookingMaxRatingCssNGTest extends BaseStepsTestNG {
         bookingSearchResultPageCss.choose5StarsRating();
         bookingSearchResultPageCss.waitForHeaderOfImplementedFilter5Xpath();
         bookingSearchResultPageCss.clickOnRating();
-        WindowsHandleUtility.switchToNewOpenedWindow();
+        Driver.switchToNewOpenedWindow();
         bookingHotelPageCss.waitForPropertyRatingStarsXpath();
         Assert.assertEquals(bookingHotelPageCss.calculateRatingStars(),
                 "5",

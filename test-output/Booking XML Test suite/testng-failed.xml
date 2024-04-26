@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.TestNGTests.MyBookingParisCheckRatingCssNGTest">
         <methods>
-          <include name="initDriver"/>
+          <include name="getConfig"/>
           <include name="myBookingParisCheckRatingCss"/>
           <include name="closeDriver"/>
         </methods>
@@ -13,9 +13,9 @@
       <class name="tests.TestNGTests.MyDemoQATasksNGTest">
         <methods>
           <include name="demoQATasksSelectOne"/>
-          <include name="initDriver"/>
-          <include name="demoQATasksMultiselectDropDown"/>
+          <include name="getConfig"/>
           <include name="demoQATasksOldStyleSelectMenu"/>
+          <include name="demoQATasksMultiselectDropDown"/>
           <include name="demoQATasksSelectValue"/>
           <include name="closeDriver"/>
           <include name="demoQATasksStandardMultiSelect"/>
@@ -23,42 +23,42 @@
       </class> <!-- tests.TestNGTests.MyDemoQATasksNGTest -->
       <class name="tests.TestNGTests.MyW3schoolsAndGoogleSearchNGTest">
         <methods>
-          <include name="initDriver"/>
+          <include name="getConfig"/>
           <include name="myW3schoolsAndGoogleSearch"/>
           <include name="closeDriver"/>
         </methods>
       </class> <!-- tests.TestNGTests.MyW3schoolsAndGoogleSearchNGTest -->
       <class name="tests.TestNGTests.MyBookingHoverCheckNGTest">
         <methods>
-          <include name="initDriver"/>
+          <include name="getConfig"/>
           <include name="closeDriver"/>
           <include name="checkCheckAltTextLanguage"/>
         </methods>
       </class> <!-- tests.TestNGTests.MyBookingHoverCheckNGTest -->
       <class name="tests.TestNGTests.MyBookingMaxRatingCssNGTest">
         <methods>
-          <include name="initDriver"/>
+          <include name="getConfig"/>
           <include name="checkBookingMaxRatingCss"/>
           <include name="closeDriver"/>
         </methods>
       </class> <!-- tests.TestNGTests.MyBookingMaxRatingCssNGTest -->
       <class name="tests.TestNGTests.MyBookingMaxRatingXPathNGTest">
         <methods>
-          <include name="initDriver"/>
+          <include name="getConfig"/>
           <include name="checkBookingMaxRatingXPath"/>
           <include name="closeDriver"/>
         </methods>
       </class> <!-- tests.TestNGTests.MyBookingMaxRatingXPathNGTest -->
       <class name="tests.TestNGTests.MyBookingLondonScreenshotsNGTest">
         <methods>
-          <include name="initDriver"/>
+          <include name="getConfig"/>
           <include name="checkMyBookingLondonScreenshots"/>
           <include name="closeDriver"/>
         </methods>
       </class> <!-- tests.TestNGTests.MyBookingLondonScreenshotsNGTest -->
       <class name="tests.TestNGTests.MyBookingParisCheckRatingXPathNGTest">
         <methods>
-          <include name="initDriver"/>
+          <include name="getConfig"/>
           <include name="myBookingParisCheckRatingXPath"/>
           <include name="closeDriver"/>
         </methods>
