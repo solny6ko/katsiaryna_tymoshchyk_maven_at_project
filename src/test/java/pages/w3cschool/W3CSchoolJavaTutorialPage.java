@@ -7,15 +7,14 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.Arrays;
 
 public class W3CSchoolJavaTutorialPage {
-    WebDriver driver = Driver.getWebDriver();
 
     public void navigateToJavaTutorialW3CSchoolPage() {
-        driver.get("https://www.w3schools.com/java/");
+        Driver.getWebDriver().get("https://www.w3schools.com/java/");
     }
 
     public void acceptCookiesJavaTutorialW3CSchoolPage(){
         try {
-            driver.findElement(By.xpath("//div[@id='accept-choices']")).click();
+            Driver.getWebDriver().findElement(By.xpath("//div[@id='accept-choices']")).click();
         } catch (NoSuchElementException e) {
             System.out.println(Arrays.toString(e.getStackTrace()));
         }
@@ -23,8 +22,8 @@ public class W3CSchoolJavaTutorialPage {
 
     public void copyTitleWithDoubleClickAndKeyboard(){
         WebElement nameHeader =
-                driver.findElement(By.xpath("//span[@class='color_h1']"));
-        Actions copyNameHeader = new Actions(driver);
+                Driver.getWebDriver().findElement(By.xpath("//span[@class='color_h1']"));
+        Actions copyNameHeader = new Actions(Driver.getWebDriver());
         copyNameHeader
                 .doubleClick(nameHeader)
                 .keyDown(Keys.LEFT_CONTROL)

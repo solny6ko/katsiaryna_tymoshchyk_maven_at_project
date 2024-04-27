@@ -9,10 +9,8 @@ import java.util.List;
 
 public class GoogleSearchResultPage {
 
-    WebDriver driver = Driver.getWebDriver();
-
     public boolean isAllSearchResultsContainProperWord() {
-        List<WebElement> searchResultsList = driver.findElements(By.xpath("//div/h1[text()='Wyniki wyszukiwania']/../div/div"));
+        List<WebElement> searchResultsList = Driver.getWebDriver().findElements(By.xpath("//div/h1[text()='Wyniki wyszukiwania']/../div/div"));
         String wordToFind = "tutorial";
 
         boolean isResultsContainWord = true;

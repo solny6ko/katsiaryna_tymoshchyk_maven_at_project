@@ -9,13 +9,11 @@ import utils.ExplicitElementWait;
 public class BookingHotelPageCss {
     public static final String PROPERTY_RATING_STARS_XPATH = "span[data-testid='rating-stars'] > span";
 
-    WebDriver driver = Driver.getWebDriver();
-
     public String calculateRatingStars() {
         int starsCount = 0;
         for (int i = 1; i < 6; i++) {
             String pathToStar = "//span[@data-testid='rating-stars']/span[" + i + "]";
-            if (driver.findElement(By.xpath(pathToStar)).isDisplayed()) {
+            if (Driver.getWebDriver().findElement(By.xpath(pathToStar)).isDisplayed()) {
                 starsCount++;
             }
         }
@@ -24,7 +22,7 @@ public class BookingHotelPageCss {
 
     //WAITERS
     public void waitForPropertyRatingStarsXpath() {
-        ExplicitElementWait.waitForElementXCss(driver, PROPERTY_RATING_STARS_XPATH);
+        ExplicitElementWait.waitForElementXCss(Driver.getWebDriver(), PROPERTY_RATING_STARS_XPATH);
     }
 
 }
