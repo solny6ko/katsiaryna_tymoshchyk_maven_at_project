@@ -18,30 +18,28 @@ public class BookingSearchResultsPageXPath {
     public static final String PROPERTY_REVIEW_SCORE_6PLUS_BUTTON_XPATH = "//span[text()='Pleasant: 6+']";
     public static final String YOUR_BUDGET_HEADER_XPATH = "//h3[text()='Your budget (per night)']";
 
-    WebDriver driver = Driver.getWebDriver();
-
     public void choose5StarsRating() {
-        driver.findElement(By.xpath(PROPERTY_RATING_CLASS_5_XPATH)).click();
+        Driver.getWebDriver().findElement(By.xpath(PROPERTY_RATING_CLASS_5_XPATH)).click();
     }
 
     public void clickOnRating() {
-        driver.findElement(By.xpath(PROPERTY_REVIEW_SCORE_XPATH)).click();
+        Driver.getWebDriver().findElement(By.xpath(PROPERTY_REVIEW_SCORE_XPATH)).click();
     }
 
     public void choose6plusRating() {
-        driver.findElement(By.xpath(PROPERTY_REVIEW_SCORE_6PLUS_XPATH)).click();
+        Driver.getWebDriver().findElement(By.xpath(PROPERTY_REVIEW_SCORE_6PLUS_XPATH)).click();
     }
 
     public void openSortResultsDropDown() {
-        driver.findElement(By.xpath("//button[@data-testid='sorters-dropdown-trigger']")).click();
+        Driver.getWebDriver().findElement(By.xpath("//button[@data-testid='sorters-dropdown-trigger']")).click();
     }
 
     public void chooseRatingLowToHighResultsSorting() {
-        driver.findElement(By.xpath("//button[@data-id='class_asc']")).click();
+        Driver.getWebDriver().findElement(By.xpath("//button[@data-id='class_asc']")).click();
     }
 
     public String checkFirstElementRatingValue() {
-        String score = driver.findElement(By.xpath("//div[@data-testid='property-card'][1]//div[@data-testid='review-score']/div[1]/div")).getText();
+        String score = Driver.getWebDriver().findElement(By.xpath("//div[@data-testid='property-card'][1]//div[@data-testid='review-score']/div[1]/div")).getText();
         String[] arrOfStr = score.split(" ");
         String scoreString = arrOfStr[1];
         String[] arrayScoreString = scoreString.split("\\.");
@@ -49,11 +47,11 @@ public class BookingSearchResultsPageXPath {
     }
 
     public void createAndSaveHotelCardScreenshot() {
-        WebElement tenthHotel = driver.findElement(By.xpath("//div[@data-testid='property-card'][10]"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tenthHotel);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].style.backgroundColor = 'green'", tenthHotel);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].style.color = 'red'", tenthHotel);
-        byte[] asBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+        WebElement tenthHotel = Driver.getWebDriver().findElement(By.xpath("//div[@data-testid='property-card'][10]"));
+        ((JavascriptExecutor) Driver.getWebDriver()).executeScript("arguments[0].scrollIntoView(true);", tenthHotel);
+        ((JavascriptExecutor) Driver.getWebDriver()).executeScript("arguments[0].style.backgroundColor = 'green'", tenthHotel);
+        ((JavascriptExecutor) Driver.getWebDriver()).executeScript("arguments[0].style.color = 'red'", tenthHotel);
+        byte[] asBytes = ((TakesScreenshot) Driver.getWebDriver()).getScreenshotAs(OutputType.BYTES);
         try {
             Files.write(Paths.get("C:\\Katarina\\Java\\files\\tenthHotel.png"), asBytes);
         } catch (IOException e) {
@@ -67,19 +65,19 @@ public class BookingSearchResultsPageXPath {
 
     //WAITERS
     public void waitForPropertyRatingHeaderXpath() {
-        ExplicitElementWait.waitForElementXPath(driver, PROPERTY_RATING_HEADER_XPATH);
+        ExplicitElementWait.waitForElementXPath(Driver.getWebDriver(), PROPERTY_RATING_HEADER_XPATH);
     }
 
     public void waitForHeaderOfImplementedFilter5Xpath() {
-        ExplicitElementWait.waitForElementXPath(driver, HEADER_OF_IMPLEMENTED_FILTER_5_XPATH);
+        ExplicitElementWait.waitForElementXPath(Driver.getWebDriver(), HEADER_OF_IMPLEMENTED_FILTER_5_XPATH);
     }
 
     public void waitForBudgetHeaderXpath() {
-        ExplicitElementWait.waitForElementXPath(driver, YOUR_BUDGET_HEADER_XPATH);
+        ExplicitElementWait.waitForElementXPath(Driver.getWebDriver(), YOUR_BUDGET_HEADER_XPATH);
     }
 
     public void waitForPropertyReviewScore6PlusBTN() {
-        ExplicitElementWait.waitForElementXPath(driver, PROPERTY_REVIEW_SCORE_6PLUS_BUTTON_XPATH);
+        ExplicitElementWait.waitForElementXPath(Driver.getWebDriver(), PROPERTY_REVIEW_SCORE_6PLUS_BUTTON_XPATH);
     }
 
 }

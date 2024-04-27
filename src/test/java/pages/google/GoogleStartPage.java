@@ -7,15 +7,14 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.Arrays;
 
 public class GoogleStartPage {
-    WebDriver driver = Driver.getWebDriver();
 
     public void navigateToGoogleHomePage() {
-        driver.get("https://google.com");
+        Driver.getWebDriver().get("https://google.com");
     }
 
     public void acceptCookiesGoogleHomePage() {
         try {
-            driver.findElement(By.xpath("//div[text()='Zaakceptuj wszystko']")).click();
+            Driver.getWebDriver().findElement(By.xpath("//div[text()='Zaakceptuj wszystko']")).click();
         } catch (NoSuchElementException e) {
             System.out.println(Arrays.toString(e.getStackTrace()));
 
@@ -24,8 +23,8 @@ public class GoogleStartPage {
 
     public void inputSearchQueryUsingKeyboard() {
         WebElement googleSearchField =
-                driver.findElement(By.xpath("//textarea[@aria-label='Szukaj']"));
-        Actions pasteNameHeader = new Actions(driver);
+                Driver.getWebDriver().findElement(By.xpath("//textarea[@aria-label='Szukaj']"));
+        Actions pasteNameHeader = new Actions(Driver.getWebDriver());
         pasteNameHeader
                 .click(googleSearchField)
                 .keyDown(Keys.LEFT_CONTROL)

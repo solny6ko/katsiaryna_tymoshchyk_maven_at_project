@@ -9,7 +9,6 @@ import tests.BaseStepsTestNG;
 public class MyBookingHoverCheckNGTest extends BaseStepsTestNG {
 
     private BookingHomePageXPath bookingHomePage = new BookingHomePageXPath();
-    private BookingSearchResultsPageXPath bookingSearchResultPage = new BookingSearchResultsPageXPath();
 
     @Test
     public void checkCheckAltTextCurrency() {
@@ -23,9 +22,9 @@ public class MyBookingHoverCheckNGTest extends BaseStepsTestNG {
 
     @Test
     public void checkCheckAltTextLanguage() {
-        bookingHomePage.navigateToBookingPage();
-        bookingHomePage.dismissSignIn();
-        bookingHomePage.acceptCookies();
+//        bookingHomePage.navigateToBookingPage();
+//        bookingHomePage.dismissSignIn();
+//        bookingHomePage.acceptCookies();
         Assert.assertEquals(bookingHomePage.checkLanguagePicker(),
                 "Select your language",
                 "Alt text on Select your language button is wrong ");
