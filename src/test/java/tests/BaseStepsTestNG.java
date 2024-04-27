@@ -13,6 +13,7 @@ public class BaseStepsTestNG {
     public static void initDriver() {
         driver = Driver.getWebDriver();
     }
+
     public static void getConfig() {
         System.out.println(System.getProperty("CONFIG"));
     }
