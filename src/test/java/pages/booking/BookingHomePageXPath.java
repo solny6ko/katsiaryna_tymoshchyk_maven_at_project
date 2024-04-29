@@ -17,6 +17,7 @@ public class BookingHomePageXPath {
     public static final String AUTOCOMPLETE_CITY_XPATH = "(//span[@data-testid='autocomplete-icon-default'])[1]";
     public static final String AUTOCOMPLETE_CITY_PARIS_XPATH = "//div[text()='Ile de France, France']";
     public static final String SUBMIT_SEARCH_REQUEST_XPATH = "//button[@type='submit']";
+    public static final String YOUR_CURRENCY_BTN_TOOLTIP_XPATH = "//div[text()='Select your currency']";
 
     public void navigateToBookingPage() {
         Driver.getWebDriver().get("https://booking.com");
@@ -90,7 +91,17 @@ public class BookingHomePageXPath {
         Actions checkAltTextCurrency = new Actions(Driver.getWebDriver());
         checkAltTextCurrency.moveToElement(currencyBtn);
         checkAltTextCurrency.perform();
-        return currencyBtn.findElement(By.xpath("//div[text()='Select your currency']")).getText();
+        return currencyBtn.findElement(By.xpath(YOUR_CURRENCY_BTN_TOOLTIP_XPATH)).getText();
+    }
+    public void hoverMouseOnCurrencyBtn(){
+        WebElement currencyBtn = Driver.getWebDriver().findElement(By.xpath("//button[@data-testid='header-currency-picker-trigger']/span"));
+        Actions checkAltTextCurrency = new Actions(Driver.getWebDriver());
+        checkAltTextCurrency.moveToElement(currencyBtn);
+        checkAltTextCurrency.perform();
+    }
+
+    public boolean checkCheckAltTextCurrency(String AltTextCurrencyValue){
+        return Driver.getWebDriver().findElement(By.xpath(YOUR_CURRENCY_BTN_TOOLTIP_XPATH)).getText().equals(AltTextCurrencyValue);
     }
 
     public String checkLanguagePicker() {

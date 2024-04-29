@@ -10,7 +10,6 @@ import static org.testng.AssertJUnit.assertEquals;
 public class MyBookingHoverCheckTest extends BaseStepsJUnit {
 
     private BookingHomePageXPath bookingHomePage = new BookingHomePageXPath();
-    private BookingSearchResultsPageXPath bookingSearchResultPage = new BookingSearchResultsPageXPath();
 
     @Test
     public void checkCheckAltTextCurrency() {
