@@ -17,6 +17,12 @@ public class BookingSearchResultsPageXPath {
     public static final String PROPERTY_REVIEW_SCORE_6PLUS_XPATH = "//div[@data-filters-item='review_score:review_score=60']//span[2]";
     public static final String PROPERTY_REVIEW_SCORE_6PLUS_BUTTON_XPATH = "//span[text()='Pleasant: 6+']";
     public static final String YOUR_BUDGET_HEADER_XPATH = "//h3[text()='Your budget (per night)']";
+    public static final String CALENDAR_ELEMENT_XPATH = "//button[@data-testid='date-display-field-start']";
+
+    public void clickOnCalendar(){
+        ExplicitElementWait.waitForElementXPath(Driver.getWebDriver(), CALENDAR_ELEMENT_XPATH);
+        Driver.getWebDriver().findElement(By.xpath(CALENDAR_ELEMENT_XPATH)).click();
+    }
 
     public void choose5StarsRating() {
         Driver.getWebDriver().findElement(By.xpath(PROPERTY_RATING_CLASS_5_XPATH)).click();
@@ -59,6 +65,25 @@ public class BookingSearchResultsPageXPath {
         }
     }
 
+    public void scrollToTenthHotel(){
+        WebElement tenthHotel = Driver.getWebDriver().findElement(By.xpath("//div[@data-testid='property-card'][10]"));
+        ((JavascriptExecutor) Driver.getWebDriver()).executeScript("arguments[0].scrollIntoView(true);", tenthHotel);
+    }
+
+    public void changeBackgroundOfHotelCard(){
+        WebElement tenthHotel = Driver.getWebDriver().findElement(By.xpath("//div[@data-testid='property-card'][10]"));
+        ((JavascriptExecutor) Driver.getWebDriver()).executeScript("arguments[0].style.backgroundColor = 'green'", tenthHotel);
+        ((JavascriptExecutor) Driver.getWebDriver()).executeScript("arguments[0].style.color = 'red'", tenthHotel);
+    }
+
+    public void makeScreenshotOfHotelCard(){
+        byte[] asBytes = ((TakesScreenshot) Driver.getWebDriver()).getScreenshotAs(OutputType.BYTES);
+        try {
+            Files.write(Paths.get("C:\\Katarina\\Java\\files\\tenthHotel.png"), asBytes);
+        } catch (IOException e) {
+            e.getStackTrace();
+        }
+    }
     public boolean checkThatScreenshotExists() {
         return Files.exists(Paths.get("C:\\Katarina\\Java\\files\\tenthHotel.png"));
     }
