@@ -19,9 +19,16 @@ public class BookingHomePageXPath {
     public static final String SUBMIT_SEARCH_REQUEST_XPATH = "//button[@type='submit']";
     public static final String YOUR_CURRENCY_BTN_TOOLTIP_XPATH = "//div[text()='Select your currency']";
     public static final String YOUR_LANGUAGE_BTN_TOOLTIP_XPATH = "//div[text()='Select your language']";
+    public static final String CLEAR_INPUT_DATA_X_XPATH = "//span[@data-testid='input-clear']";
+
 
     public void navigateToBookingPage() {
         Driver.getWebDriver().get("https://booking.com");
+    }
+
+    public void clearInputDataFromInputCityField(){
+        ExplicitElementWait.waitForElementXPath(Driver.getWebDriver(), CLEAR_INPUT_DATA_X_XPATH);
+        Driver.getWebDriver().findElement(By.xpath(CLEAR_INPUT_DATA_X_XPATH)).click();
     }
 
     public void acceptCookies() {
@@ -114,10 +121,10 @@ public class BookingHomePageXPath {
     }
 
     public void hoverMouseOnLanguageBtn(){
-        WebElement currencyBtn = Driver.getWebDriver().findElement(By.xpath("//button[@data-testid='header-language-picker-trigger']/span"));
-        Actions checkAltTextCurrency = new Actions(Driver.getWebDriver());
-        checkAltTextCurrency.moveToElement(currencyBtn);
-        checkAltTextCurrency.perform();
+        WebElement languageBtn = Driver.getWebDriver().findElement(By.xpath("//button[@data-testid='header-language-picker-trigger']/span"));
+        Actions checkAltTextLanguage = new Actions(Driver.getWebDriver());
+        checkAltTextLanguage.moveToElement(languageBtn);
+        checkAltTextLanguage.perform();
     }
 
     public boolean checkCheckAltTextLanguage(String AltTextLanguageValue){
