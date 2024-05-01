@@ -11,4 +11,4 @@ Feature: My Booking bdd scenarios
     And I dismiss sign in
     And I accept cookies
     When I hover mouse on language button
-    Then I see language tooltip message "Select your language" of currency button
+    Then I see language tooltip message "Selecgit statt your language" of currency button

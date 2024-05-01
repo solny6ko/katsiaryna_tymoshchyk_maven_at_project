@@ -18,7 +18,7 @@ public class BookingHomePageXPath {
     public static final String AUTOCOMPLETE_CITY_PARIS_XPATH = "//div[text()='Ile de France, France']";
     public static final String SUBMIT_SEARCH_REQUEST_XPATH = "//button[@type='submit']";
     public static final String YOUR_CURRENCY_BTN_TOOLTIP_XPATH = "//div[text()='Select your currency']";
-    public static final String YOUR_LANGUAGE_BTN_TOOLTIP_XPATH = "//div[text()='Select your currency']";
+    public static final String YOUR_LANGUAGE_BTN_TOOLTIP_XPATH = "//div[text()='Select your language']";
 
     public void navigateToBookingPage() {
         Driver.getWebDriver().get("https://booking.com");
