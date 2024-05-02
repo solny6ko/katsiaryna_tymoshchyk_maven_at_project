@@ -11,7 +11,8 @@ import tests.BaseStepsJUnit;
         plugin = { "pretty", "summary"},
         glue = { "steps"},
         features = {
-                "src/test/resources/features/firstfeature/bookingBdd.feature"
+                "src/test/resources/features/firstfeature/bookingBdd.feature",
+                "src/test/resources/features/firstfeature/demoQABdd.feature"
         }
 )
 public class CucumberRunner  extends BaseStepsJUnit {
