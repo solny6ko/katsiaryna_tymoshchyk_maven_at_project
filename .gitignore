@@ -30,3 +30,7 @@ target/
 test-output/
 
 **/db.properties
+
+**/booking.json
+
+data/booking.json

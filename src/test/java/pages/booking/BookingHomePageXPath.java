@@ -36,6 +36,10 @@ public class BookingHomePageXPath {
         Driver.getWebDriver().findElement(By.xpath(ACCEPT_COOKIES_BTN_XPATH)).click();
     }
 
+    public void navigateToSignIn() {
+        Driver.getWebDriver().findElement(By.xpath("//a[@data-testid='header-sign-in-button']")).click();
+    }
+
     public void dismissSignIn() {
         try {
             Driver.getWebDriver().findElement(By.xpath(DISMISS_SIGN_IN_INFO_XPATH)).click();
@@ -60,6 +64,15 @@ public class BookingHomePageXPath {
         int checkInDay = LocalDate.now().plusDays(daysToAddToCHeckIn).getDayOfMonth();
         int checkOutDay = LocalDate.now().plusDays(daysToAddToCHeckOut).getDayOfMonth();
         String pathToDay = "//div[@data-testid='searchbox-datepicker-calendar']/div/div[1]/table/tbody//span[text()='%s']";
+        Driver.getWebDriver().findElement(By.xpath(String.format(pathToDay, checkInDay))).click();
+        Driver.getWebDriver().findElement(By.xpath(String.format(pathToDay, checkOutDay))).click();
+        Driver.getWebDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
+
+    public void fillInDaysForStayMonthsFromNow(int daysToAddToCHeckIn, int daysToAddToCHeckOut) {
+        int checkInDay = LocalDate.now().plusMonths(daysToAddToCHeckIn).getDayOfMonth();
+        int checkOutDay = LocalDate.now().plusDays(daysToAddToCHeckOut).getDayOfMonth();
+        String pathToDay = "//div[@data-testid='searchbox-datepicker-calendar']/div/div[2]/table/tbody//span[text()='%s']";
         Driver.getWebDriver().findElement(By.xpath(String.format(pathToDay, checkInDay))).click();
         Driver.getWebDriver().findElement(By.xpath(String.format(pathToDay, checkOutDay))).click();
         Driver.getWebDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
