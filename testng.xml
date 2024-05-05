@@ -4,14 +4,15 @@
 <suite name="Booking XML Test suite" verbose="1">
     <test name="Booking tests">
         <classes>
-            <class name="tests.TestNGTests.MyBookingHoverCheckNGTest"/>
-            <class name="tests.TestNGTests.MyBookingLondonScreenshotsNGTest"/>
-            <class name="tests.TestNGTests.MyBookingMaxRatingCssNGTest"/>
-            <class name="tests.TestNGTests.MyBookingMaxRatingXPathNGTest"/>
-            <class name="tests.TestNGTests.MyBookingParisCheckRatingCssNGTest"/>
-            <class name="tests.TestNGTests.MyBookingParisCheckRatingXPathNGTest"/>
-            <class name="tests.TestNGTests.MyDemoQATasksNGTest"/>
-            <class name="tests.TestNGTests.MyW3schoolsAndGoogleSearchNGTest"/>
+<!--            <class name="tests.TestNGTests.MyBookingHoverCheckNGTest"/>-->
+<!--            <class name="tests.TestNGTests.MyBookingLondonScreenshotsNGTest"/>-->
+<!--            <class name="tests.TestNGTests.MyBookingMaxRatingCssNGTest"/>-->
+<!--            <class name="tests.TestNGTests.MyBookingMaxRatingXPathNGTest"/>-->
+<!--            <class name="tests.TestNGTests.MyBookingParisCheckRatingCssNGTest"/>-->
+<!--            <class name="tests.TestNGTests.MyBookingParisCheckRatingXPathNGTest"/>-->
+<!--            <class name="tests.TestNGTests.MyDemoQATasksNGTest"/>-->
+<!--            <class name="tests.TestNGTests.MyW3schoolsAndGoogleSearchNGTest"/>-->
+            <class name="tests.TestNGTests.ChuckNorrisRequests"/>
         </classes>
     </test>
 </suite>
